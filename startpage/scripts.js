@@ -8,7 +8,7 @@
 const searchInput = document.querySelector("#searchbar > input")
 const searchButton = document.querySelector("#searchbar > button")
 
-const lookup = {"netflix":"https://netflix.com","crunchyroll":"https://crunchyroll.com","banco":"https://nwm.bancoestado.cl/"}
+const lookup = {"netflix":"https://netflix.com","crunchyroll":"https://crunchyroll.com","banco":"https://nwm.bancoestado.cl/content/bancoestado-public/cl/es/home/home.html"}
 const engine = "librex"
 const engineUrls = {
   deepl: "https://www.deepl.com/translator#-/-/",
