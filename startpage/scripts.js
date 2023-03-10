@@ -8,7 +8,7 @@
 const searchInput = document.querySelector("#searchbar > input")
 const searchButton = document.querySelector("#searchbar > button")
 
-const lookup = {"netflix":"https://netflix.com","crunchyroll":"https://crunchyroll.com","banco":"https://nwm.bancoestado.cl/content/bancoestado-public/cl/es/home/home.html"}
+const lookup = {"reddit":"https://lr.slipfox.xyz","netflix":"https://netflix.com","crunchyroll":"https://crunchyroll.com","banco":"https://nwm.bancoestado.cl/content/bancoestado-public/cl/es/home/home.html"}
 const engine = "librex"
 const engineUrls = {
   deepl: "https://www.deepl.com/translator#-/-/",
@@ -48,7 +48,7 @@ searchButton.onclick = search
  * inject bookmarks into html
  */
 
-const bookmarks = [{"id":"Se9Ej4rJCrzsbVaf","label":"social","bookmarks":[{"id":"Lh5kBGKdwonCQqwn","label":"instagram","url":"https://instagram.com"},{"id":"utWJ48n5sZ5LuQ4N","label":"mail","url":"https://mail.proton.me/u/1/inbox"},{"id":"ovVjgzyZbYYHEMZF","label":"whatsapp","url":"https://web.whatsapp.com/"}]},{"id":"wQLNQtF8j9HOHA6Z","label":"channel","bookmarks":[{"id":"xtNNk05lDPb4A3zk","label":"music","url":"https://chillhop.com/"},{"id":"dqSE7EaqBpuYy5lI","label":"mail","url":"https://accounts.google.com"},{"id":"q5YIDPzF3Y9tRv6S","label":"ko-fi","url":"https://ko-fi.com/account/login"},{"id":"3ntc3GXfw10mvIA4","label":"youtube","url":"https://youtube.com/c/andrew1412"}]},{"id":"FyrYDG7rHKufsjZi","label":"work","bookmarks":[{"id":"Ah9aZ18HK6G0NsOm","label":"hosting","url":"http://hpanel.hostinger.com/"},{"id":"FWkRZ13T2j1e8B47","label":"web","url":"https://montetzion.net/dws9eyusqg2k2ncu/index.php?controller=AdminLogin&token=65f4366397b7526bfe5e70af67bbc66d&redirect=AdminDashboard"}]},{"id":"PNjspx2tZuq62lbF","label":"tools","bookmarks":[{"id":"T1fMMFh5cq6e8bEV","label":"github","url":"https://github.com/login"},{"id":"yk7cEdO7aPd6a6sm","label":"pexels","url":"https://"},{"id":"cQvhvLEzJtfAwKKg","label":"translate","url":"https://simplytranslate.org/"}]}]
+const bookmarks = [{"id":"Se9Ej4rJCrzsbVaf","label":"social","bookmarks":[{"id":"Lh5kBGKdwonCQqwn","label":"instagram","url":"https://instagram.com"},{"id":"utWJ48n5sZ5LuQ4N","label":"mail","url":"https://mail.proton.me/u/1/inbox"},{"id":"ovVjgzyZbYYHEMZF","label":"whatsapp","url":"https://web.whatsapp.com/"}]},{"id":"wQLNQtF8j9HOHA6Z","label":"channel","bookmarks":[{"id":"xtNNk05lDPb4A3zk","label":"music","url":"https://chillhop.com/"},{"id":"dqSE7EaqBpuYy5lI","label":"mail","url":"https://accounts.google.com"},{"id":"q5YIDPzF3Y9tRv6S","label":"ko-fi","url":"https://ko-fi.com/account/login"},{"id":"3ntc3GXfw10mvIA4","label":"youtube","url":"https://youtube.com/c/andrew1412"}]},{"id":"FyrYDG7rHKufsjZi","label":"work","bookmarks":[{"id":"Ah9aZ18HK6G0NsOm","label":"hosting","url":"http://hpanel.hostinger.com/"},{"id":"FWkRZ13T2j1e8B47","label":"web","url":"https://montetzion.net/dws9eyusqg2k2ncu/index.php?controller=AdminLogin&token=65f4366397b7526bfe5e70af67bbc66d&redirect=AdminDashboard"}]},{"id":"PNjspx2tZuq62lbF","label":"tools","bookmarks":[{"id":"T1fMMFh5cq6e8bEV","label":"github","url":"https://github.com/login"},{"id":"yk7cEdO7aPd6a6sm","label":"pexels","url":"https://"},{"id":"cQvhvLEzJtfAwKKg","label":"translate","url":"https://translate.bus-hit.me"}]}]
 
 const createGroupContainer = () => {
   const container = document.createElement("div")
