@@ -8,15 +8,13 @@
 const searchInput = document.querySelector("#searchbar > input")
 const searchButton = document.querySelector("#searchbar > button")
 
-const lookup = {"netflix":"https://netflix.com","crunchyroll":"https://crunchyroll.com"}
-const engine = "startpage"
+const lookup = {"zzls":"https://zzls.xyz/"}
+const engine = "searxng"
 const engineUrls = {
-  deepl: "https://www.deepl.com/translator#-/-/",
   duckduckgo: "https://duckduckgo.com/?q=",
-  ecosia: "https://www.ecosia.org/search?q=",
-  google: "https://www.google.com/search?q=",
   startpage: "https://www.startpage.com/search?q=",
-  youtube: "https://www.youtube.com/results?q=",
+  searxng: "https://search.zzls.xyz/search?q=",
+  librex: "https://librex.zzls.xyz/search.php?q=",
 }
 
 const isWebUrl = value => {
