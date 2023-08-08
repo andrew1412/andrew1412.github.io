@@ -9,12 +9,14 @@ const searchInput = document.querySelector("#searchbar > input")
 const searchButton = document.querySelector("#searchbar > button")
 
 const lookup = {"zzls":"https://zzls.xyz/"}
-const engine = "searxng"
+const engine = "https://search.zzls.xyz/search?q={query}"
 const engineUrls = {
-  duckduckgo: "https://duckduckgo.com/?q=",
-  startpage: "https://www.startpage.com/search?q=",
-  searxng: "https://search.zzls.xyz/search?q=",
-  librex: "https://librex.zzls.xyz/search.php?q=",
+  deepl: "https://www.deepl.com/translator#-/-/{query}",
+  duckduckgo: "https://duckduckgo.com/?q={query}",
+  ecosia: "https://www.ecosia.org/search?q={query}",
+  google: "https://www.google.com/search?q={query}",
+  startpage: "https://www.startpage.com/search?q={query}",
+  youtube: "https://www.youtube.com/results?q={query}",
 }
 
 const isWebUrl = value => {
@@ -29,7 +31,8 @@ const isWebUrl = value => {
 const getTargetUrl = value => {
   if (isWebUrl(value)) return value
   if (lookup[value]) return lookup[value]
-  return engineUrls[engine] + value
+  const url = engineUrls[engine] ?? engine
+  return url.replace("{query}", value)
 }
 
 const search = () => {
@@ -45,7 +48,7 @@ searchButton.onclick = search
  * inject bookmarks into html
  */
 
-const bookmarks = [{"id":"PNjspx2tZuq62lbF","label":"dev","bookmarks":[{"id":"T1fMMFh5cq6e8bEV","label":"github","url":"https://github.com/login"},{"id":"yk7cEdO7aPd6a6sm","label":"deno","url":"https://dash.deno.com/projects"}]},{"id":"Y4G0nYOlESb5UO0s","label":"tools","bookmarks":[{"id":"Sc1Tatq6mF99eyAR","label":"send","url":"https://send.cyberjake.xyz/"},{"id":"yUhAkSFNGKd5zQau","label":"temp mail","url":"https://www.guerrillamail.com/"}]},{"id":"QiPDbBvcgy1iXp7T","label":"guide","bookmarks":[{"id":"yIdxtRQLmYFsebSU","label":"md syntax","url":"https://www.markdownguide.org/basic-syntax/"},{"id":"AXmso9zl3twJf9xe","label":"deno docs","url":"https://deno.land/manual@v1.35.1/introduction"}]},{"id":"SbNvXBN7Pz6hReUR","label":"etc","bookmarks":[{"id":"cNkik46Wj9cqGbDT","label":"flathub","url":"https://flathub.org"},{"id":"XCtCArL8cbF95VaO","label":"solotodo","url":"https://solotodo.cl"}]}]
+const bookmarks = [{"id":"PNjspx2tZuq62lbF","label":"dev","bookmarks":[{"id":"T1fMMFh5cq6e8bEV","label":"git","url":"https://github.com/login"},{"id":"yk7cEdO7aPd6a6sm","label":"deploy","url":"https://dash.deno.com/projects"},{"id":"1SSiyaxhRlihw6Z5","label":"web test","url":"http://localhost:8000/"}]},{"id":"Y4G0nYOlESb5UO0s","label":"tools","bookmarks":[{"id":"Sc1Tatq6mF99eyAR","label":"send","url":"https://send.cyberjake.xyz/"},{"id":"yUhAkSFNGKd5zQau","label":"temp mail","url":"https://www.guerrillamail.com/"}]},{"id":"QiPDbBvcgy1iXp7T","label":"docs","bookmarks":[{"id":"yIdxtRQLmYFsebSU","label":"md","url":"https://www.markdownguide.org/basic-syntax/"},{"id":"AXmso9zl3twJf9xe","label":"deno","url":"https://deno.land/manual"},{"id":"vZAQbKxclP8okqaW","label":"fresh","url":"https://fresh.deno.dev/docs/"}]},{"id":"SbNvXBN7Pz6hReUR","label":"etc","bookmarks":[{"id":"cNkik46Wj9cqGbDT","label":"flathub","url":"https://flathub.org"},{"id":"XCtCArL8cbF95VaO","label":"alternativeto","url":"https://alternativeto.net/"}]}]
 
 const createGroupContainer = () => {
   const container = document.createElement("div")
