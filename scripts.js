@@ -11,11 +11,12 @@ const searchButton = document.querySelector("#searchbar > button")
 const lookup = {"zzls":"https://zzls.xyz/"}
 const engine = "https://4get.zzls.xyz/web?s={query}"
 const engineUrls = {
+  deepl: "https://www.deepl.com/translator#-/-/{query}",
   duckduckgo: "https://duckduckgo.com/?q={query}",
+  ecosia: "https://www.ecosia.org/search?q={query}",
+  google: "https://www.google.com/search?q={query}",
   startpage: "https://www.startpage.com/search?q={query}",
-  searxng: "https://search.zzls.xyz/search?q={query}",
-  librex: "https://librex.zzls.xyz/search.php?q={query}",
-  4get: "https://4get.zzls.xyz/web?s={query}",
+  youtube: "https://www.youtube.com/results?q={query}",
 }
 
 const isWebUrl = value => {
