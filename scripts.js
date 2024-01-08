@@ -9,7 +9,7 @@ const searchInput = document.querySelector("#searchbar > input")
 const searchButton = document.querySelector("#searchbar > button")
 
 const lookup = {"zzls":"https://zzls.xyz/"}
-const engine = "https://4get.zzls.xyz/web?s={query}"
+const engine = "https://search.zzls.xyz/search?q={query}"
 const engineUrls = {
   deepl: "https://www.deepl.com/translator#-/-/{query}",
   duckduckgo: "https://duckduckgo.com/?q={query}",
@@ -48,7 +48,7 @@ searchButton.onclick = search
  * inject bookmarks into html
  */
 
-const bookmarks = [{"id":"PNjspx2tZuq62lbF","label":"dev","bookmarks":[{"id":"T1fMMFh5cq6e8bEV","label":"git","url":"https://github.com/login"},{"id":"yk7cEdO7aPd6a6sm","label":"deploy","url":"https://dash.deno.com/projects"},{"id":"1SSiyaxhRlihw6Z5","label":"web test","url":"http://localhost:8000/"}]},{"id":"Y4G0nYOlESb5UO0s","label":"tools","bookmarks":[{"id":"Sc1Tatq6mF99eyAR","label":"send","url":"https://send.cyberjake.xyz/"},{"id":"yUhAkSFNGKd5zQau","label":"temp mail","url":"https://www.guerrillamail.com/"}]},{"id":"QiPDbBvcgy1iXp7T","label":"docs","bookmarks":[{"id":"yIdxtRQLmYFsebSU","label":"md","url":"https://www.markdownguide.org/basic-syntax/"},{"id":"AXmso9zl3twJf9xe","label":"deno","url":"https://deno.land/manual"},{"id":"vZAQbKxclP8okqaW","label":"fresh","url":"https://fresh.deno.dev/docs/"}]},{"id":"SbNvXBN7Pz6hReUR","label":"etc","bookmarks":[{"id":"cNkik46Wj9cqGbDT","label":"flathub","url":"https://flathub.org"},{"id":"XCtCArL8cbF95VaO","label":"alternativeto","url":"https://alternativeto.net/"}]}]
+const bookmarks = [{"id":"PNjspx2tZuq62lbF","label":"dev","bookmarks":[{"id":"T1fMMFh5cq6e8bEV","label":"git","url":"https://github.com/login"},{"id":"yk7cEdO7aPd6a6sm","label":"deploy","url":"https://dash.deno.com/projects"},{"id":"1SSiyaxhRlihw6Z5","label":"docs","url":"https://fresh.deno.dev/docs/"}]},{"id":"w2kLX60zfei8IAPq","label":"fun","bookmarks":[{"id":"UO1cldjDR1rik3pa","label":"roms","url":"https://vimm.net/"},{"id":"fZoX9g5FVBnNVoPF","label":"anime","url":"https://everythingmoe.com/"}]},{"id":"LvmjE4vAYoBUI2NV","label":"tools","bookmarks":[{"id":"lxzH6F8PIolxExp7","label":"send","url":"https://send.cyberjake.xyz/"},{"id":"qxZCleFVhpC9ERrw","label":"temp mail","url":"https://www.guerrillamail.com/"},{"id":"vsb9tg9JnMB9lSJg","label":"alternativeto","url":"https://alternativeto.net/"}]},{"id":"C99Moawhds9qWiYz","label":"etc","bookmarks":[{"id":"pGpRB4vtzQXmewFG","label":"lemmy","url":"https://lemmy.sdf.org"},{"id":"oZsTAaWJ4RpTFdFc","label":"speedtest","url":"https://librespeed.org/"}]}]
 
 const createGroupContainer = () => {
   const container = document.createElement("div")
