@@ -9,7 +9,7 @@ const searchInput = document.querySelector("#searchbar > input")
 const searchButton = document.querySelector("#searchbar > button")
 
 const lookup = {"zzls":"https://zzls.xyz/"}
-const engine = "https://search.zzls.xyz/search?q={query}"
+const engine = "https://4get.zzls.xyz/web?s={query}"
 const engineUrls = {
   deepl: "https://www.deepl.com/translator#-/-/{query}",
   duckduckgo: "https://duckduckgo.com/?q={query}",
