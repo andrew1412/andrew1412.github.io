@@ -8,7 +8,7 @@
 const searchInput = document.querySelector("#searchbar > input")
 const searchButton = document.querySelector("#searchbar > button")
 
-const lookup = {"torrent":"https://1337x.to/"}
+const lookup = {"torrent":"https://1337x.to/",peliculas":"https://utelevision.to""}
 const engine = "https://4get.nadeko.net/web?s={query}"
 const engineUrls = {
   deepl: "https://www.deepl.com/translator#-/-/{query}",
